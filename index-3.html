@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0A0D12">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="A fast, ad-free currency converter with a built-in calculator.">
+<title>Converter</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0A0D12;
+    --card:#151A23;
+    --card-hi:#19212C;
+    --key:#1B222D;
+    --key-press:#2B3543;
+    --stroke:rgba(255,255,255,.07);
+    --accent:#2DD4A7;
+    --accent-soft:rgba(45,212,167,.13);
+    --accent-ink:#04231B;
+    --text:#E9EFF6;
+    --muted:#79879A;
+    --warn:#F6C177;
+    --flagbg:#E8EDF3;
+    --toast:#252E3A;
+    --toast-ink:#E9EFF6;
+    --shadow:rgba(0,0,0,.45);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+    --bg:#EEF2F7; --card:#FFFFFF; --card-hi:#FFFFFF; --key:#FFFFFF; --key-press:#DDE4EC;
+    --stroke:rgba(16,24,40,.10); --accent:#0E9C7B; --accent-soft:rgba(14,156,123,.13);
+    --accent-ink:#FFFFFF; --text:#101823; --muted:#5D6B7C; --warn:#A96A00;
+    --flagbg:#EDF1F6; --toast:#1C2530; --toast-ink:#EAF0F7; --shadow:rgba(16,24,40,.16);
+    color-scheme:light;
+  } }
+  :root[data-theme="light"]{
+    --bg:#EEF2F7; --card:#FFFFFF; --card-hi:#FFFFFF; --key:#FFFFFF; --key-press:#DDE4EC;
+    --stroke:rgba(16,24,40,.10); --accent:#0E9C7B; --accent-soft:rgba(14,156,123,.13);
+    --accent-ink:#FFFFFF; --text:#101823; --muted:#5D6B7C; --warn:#A96A00;
+    --flagbg:#EDF1F6; --toast:#1C2530; --toast-ink:#EAF0F7; --shadow:rgba(16,24,40,.16);
+    color-scheme:light;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%;margin:0;overflow:hidden}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;
+    touch-action:manipulation;font-variant-numeric:tabular-nums;
+    letter-spacing:-.01em;
+  }
+  button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  #app{height:100%;display:flex;flex-direction:column;gap:9px;padding:9px 9px 4px}
+
+  /* ---------- panels ---------- */
+  .stack{flex:1 1 0;min-height:0;display:flex;flex-direction:column;gap:9px;position:relative}
+  .panel{
+    flex:1 1 0;min-height:0;background:var(--card);border-radius:22px;
+    display:flex;flex-direction:column;justify-content:center;gap:8px;
+    padding:12px 16px;position:relative;overflow:hidden;
+    transition:background .15s, box-shadow .15s;
+  }
+  .panel.active{background:var(--card-hi);box-shadow:inset 0 0 0 1.5px rgba(45,212,167,.3)}
+  .cur{
+    align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+    padding:6px 11px 6px 6px;border-radius:999px;background:rgba(255,255,255,.055);
+    transition:transform .07s, background .12s;
+  }
+  .cur:active{transform:scale(.96);background:rgba(255,255,255,.1)}
+  .flag{
+    width:27px;height:27px;border-radius:50%;overflow:hidden;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;background:var(--flagbg);
+    font-size:23px;line-height:1;
+    font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  }
+  .cur .code{font-size:15px;font-weight:600;letter-spacing:.05em}
+  .chev{width:15px;height:15px;stroke:var(--muted);stroke-width:2.4;margin-left:-2px}
+  .val{display:flex;align-items:center;justify-content:flex-end;gap:9px;min-width:0}
+  .eq{font-size:23px;color:var(--muted);flex:0 0 auto;visibility:hidden;font-weight:300}
+  .val.result .eq{visibility:visible}
+  .num{font-size:44px;font-weight:350;white-space:nowrap;overflow:hidden;max-width:100%;line-height:1.1}
+  .num.s2{font-size:36px}
+  .num.s3{font-size:29px}
+  .num.s4{font-size:23px}
+  .caret{display:inline-block;width:2.5px;height:.92em;border-radius:2px;background:var(--accent);
+         margin-left:4px;vertical-align:-.1em;animation:blink 1.1s steps(1,end) infinite}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion: reduce){.caret{animation:none}*{transition:none !important}}
+
+  #swapFab{
+    position:absolute;top:50%;right:14px;transform:translateY(-50%);
+    width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--accent-ink);
+    display:flex;align-items:center;justify-content:center;z-index:3;
+    box-shadow:0 6px 18px var(--shadow);transition:transform .12s;
+  }
+  #swapFab svg{width:21px;height:21px;stroke-width:2.3}
+  #swapFab:active{transform:translateY(-50%) scale(.9)}
+
+  /* ---------- keypad ---------- */
+  .keys{
+    flex:2.02 1 0;min-height:0;display:grid;
+    grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(5,1fr);gap:8px;
+  }
+  .k{
+    background:var(--key);border-radius:19px;display:flex;align-items:center;justify-content:center;
+    font-size:26px;font-weight:450;transition:transform .07s, background .12s, filter .12s;
+  }
+  .k:active{transform:scale(.94);background:var(--key-press)}
+  .k.fn{background:transparent;box-shadow:inset 0 0 0 1.4px var(--stroke);color:var(--muted);font-size:21px}
+  .k.fn:active{background:rgba(255,255,255,.05)}
+  .k.op{background:var(--accent-soft);color:var(--accent);font-size:27px;font-weight:500}
+  .k.eq{background:var(--accent);color:var(--accent-ink);font-weight:600}
+  .k svg{width:23px;height:23px}
+
+  /* ---------- status bar ---------- */
+  .bar{flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:2px 2px 2px}
+  .bar button{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;flex:0 0 auto;color:var(--muted)}
+  .bar button:active{background:rgba(255,255,255,.07)}
+  .bar svg{width:20px;height:20px;stroke-width:1.9}
+  .rateWrap{flex:1 1 auto;min-width:0;text-align:center;padding:3px 0}
+  #rateLine{font-size:15px;color:#D2DCE8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #rateAge{font-size:12px;color:var(--muted);margin-top:3px;display:flex;align-items:center;justify-content:center;gap:6px}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex:0 0 auto}
+  #rateAge.live .dot{background:var(--accent);box-shadow:0 0 0 3px rgba(45,212,167,.16)}
+  #rateAge.live{color:var(--accent)}
+  #rateAge.warn .dot{background:var(--warn)}
+  #rateAge.warn{color:var(--warn)}
+  #rateAge.custom .dot{background:#8AB4F8}
+  #rateAge.custom{color:#8AB4F8}
+  .spin{animation:spin .9s linear infinite;transform-origin:50% 50%}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ---------- currency picker ---------- */
+  .screen{
+    position:fixed;inset:0;background:var(--bg);z-index:20;display:none;flex-direction:column;
+    padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  .screen.open{display:flex}
+  .head{display:flex;align-items:center;padding:10px 8px 6px;flex:0 0 auto}
+  .head h1{flex:1 1 auto;text-align:center;font-size:19px;font-weight:600;margin:0 44px 0 0}
+  .back{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  .back svg{width:24px;height:24px;stroke-width:2.4}
+  .searchWrap{padding:4px 14px 10px;flex:0 0 auto}
+  #search{
+    width:100%;height:46px;border-radius:15px;background:var(--card);border:1.4px solid transparent;
+    padding:0 16px;color:var(--text);font-size:16px;-webkit-user-select:text;user-select:text;
+  }
+  #search::placeholder{color:var(--muted)}
+  #search:focus{outline:none;border-color:var(--accent)}
+  #list{flex:1 1 auto;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 10px 20px}
+  .row{display:flex;align-items:center;gap:14px;padding:10px 12px;width:100%;text-align:left;border-radius:15px}
+  .row:active{background:var(--card)}
+  .row .flag{width:36px;height:36px;font-size:30px}
+  .row .name{flex:1 1 auto;font-size:16.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row .cc{font-size:14px;color:var(--muted);letter-spacing:.05em;font-weight:600;flex:0 0 auto}
+  .row.pinned{background:rgba(255,255,255,.035)}
+  .row.pinned .cc{color:var(--accent)}
+  .row.chosen{box-shadow:inset 0 0 0 1.4px rgba(45,212,167,.35)}
+  .empty{padding:36px 20px;text-align:center;color:var(--muted);font-size:15px}
+  .secLabel{padding:14px 14px 6px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- sheet & dialog ---------- */
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:30;display:none}
+  .scrim.open{display:block}
+  .sheet{
+    position:fixed;left:0;right:0;bottom:0;z-index:31;background:var(--card);
+    border-radius:24px 24px 0 0;padding:6px 0 calc(12px + env(safe-area-inset-bottom,0px));
+    transform:translateY(101%);transition:transform .2s cubic-bezier(.2,.8,.3,1);
+    max-height:86vh;overflow-y:auto;
+  }
+  .sheet.open{transform:translateY(0)}
+  .grip{width:36px;height:4px;border-radius:2px;background:var(--muted);opacity:.45;margin:8px auto 8px}
+  .item{display:flex;align-items:center;gap:14px;padding:14px 22px;width:100%;text-align:left;font-size:16px}
+  .item:active{background:rgba(255,255,255,.05)}
+  .item .sub{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+  .item svg{width:20px;height:20px;color:var(--muted);flex:0 0 auto}
+  .item .txt{flex:1 1 auto;min-width:0}
+  .toggle{width:44px;height:26px;border-radius:13px;background:var(--muted);position:relative;flex:0 0 auto;transition:background .15s}
+  .toggle::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .15s}
+  .toggle.on{background:var(--accent)}
+  .toggle.on::after{left:21px}
+  .seg{display:flex;gap:4px;background:rgba(127,140,158,.16);padding:3px;border-radius:12px;flex:0 0 auto}
+  .seg button{padding:6px 10px;border-radius:9px;font-size:13px;color:var(--muted)}
+  .seg button.on{background:var(--card);color:var(--text);font-weight:600;box-shadow:0 1px 3px var(--shadow)}
+  [hidden]{display:none !important}
+  .credit{padding:10px 22px 4px;font-size:11.5px;color:var(--muted);text-align:center;line-height:1.5}
+  .credit a{color:var(--muted)}
+  .dlg{
+    position:fixed;z-index:31;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:min(340px,88vw);background:var(--card);border-radius:22px;padding:22px;display:none;
+  }
+  .dlg.open{display:block}
+  .dlg h2{margin:0 0 6px;font-size:17px;font-weight:600}
+  .dlg p{margin:0 0 14px;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .dlg input{
+    width:100%;height:50px;border-radius:14px;background:var(--bg);border:1.4px solid var(--stroke);
+    padding:0 15px;color:var(--text);font-size:19px;-webkit-user-select:text;user-select:text;
+  }
+  .dlg input:focus{outline:none;border-color:var(--accent)}
+  .dlgBtns{display:flex;gap:9px;margin-top:16px}
+  .dlgBtns button{flex:1 1 0;height:46px;border-radius:14px;background:rgba(255,255,255,.07);font-size:15px}
+  .dlgBtns button.primary{background:var(--accent);color:var(--accent-ink);font-weight:600}
+  #toast{
+    position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);
+    background:var(--toast);color:var(--toast-ink);padding:12px 18px;border-radius:16px;font-size:14px;
+    z-index:40;opacity:0;pointer-events:none;transition:opacity .2s;max-width:86vw;text-align:center;line-height:1.4;
+    box-shadow:0 10px 30px var(--shadow);
+  }
+  #toast.show{opacity:1}
+
+  @media (orientation:landscape) and (max-height:560px){
+    #app{gap:6px;padding:6px 8px 2px}
+    .stack{gap:6px}
+    .panel{padding:7px 13px;gap:3px;border-radius:15px}
+    .cur{padding:3px 9px 3px 3px}
+    .flag{width:21px;height:21px;font-size:17px}
+    .cur .code{font-size:13px}
+    .num{font-size:28px} .num.s2{font-size:24px} .num.s3{font-size:20px} .num.s4{font-size:17px}
+    .keys{gap:5px} .k{border-radius:12px;font-size:20px} .k.fn{font-size:17px} .k svg{width:19px;height:19px}
+    #swapFab{width:36px;height:36px;right:10px} #swapFab svg{width:17px;height:17px}
+    #rateLine{font-size:13px} #rateAge{font-size:11px;margin-top:1px}
+    .bar button{width:34px;height:34px}
+  }
+  @media (min-width:600px) and (min-height:560px){
+    body{display:flex;align-items:center;justify-content:center;background:#05070A}
+    #app{width:400px;height:min(100%,830px);border-radius:26px;box-shadow:0 20px 70px rgba(0,0,0,.7);background:var(--bg)}
+    .screen,.scrim{position:absolute;border-radius:26px}
+    .sheet,.dlg,#toast{position:absolute}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div class="stack">
+    <section class="panel" id="pTop">
+      <button class="cur" data-slot="0" aria-label="Change top currency">
+        <span class="flag"></span><span class="code"></span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="val" data-slot="0"><span class="eq">=</span><span class="num">0</span></div>
+    </section>
+
+    <button id="swapFab" aria-label="Swap the two currencies">
+      <svg viewBox="0 0 24 24"><path d="M8 4.5v15M8 19.5l-3.3-3.3M8 19.5l3.3-3.3"/><path d="M16 19.5v-15M16 4.5l-3.3 3.3M16 4.5l3.3 3.3"/></svg>
+    </button>
+
+    <section class="panel" id="pBot">
+      <button class="cur" data-slot="1" aria-label="Change bottom currency">
+        <span class="flag"></span><span class="code"></span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="val" data-slot="1"><span class="eq">=</span><span class="num">0</span></div>
+    </section>
+  </div>
+
+  <div class="keys" id="keys">
+    <button class="k fn" data-k="C">C</button>
+    <button class="k fn" data-k="back" aria-label="Backspace"><svg viewBox="0 0 24 24"><path d="M20 6H9l-5 6 5 6h11z"/><path d="M14.5 9.5l-4 5M10.5 9.5l4 5"/></svg></button>
+    <button class="k fn" data-k="swap" aria-label="Swap currencies"><svg viewBox="0 0 24 24"><path d="M8 5v14M8 19l-3-3M8 19l3-3"/><path d="M16 19V5M16 5l-3 3M16 5l3 3"/></svg></button>
+    <button class="k op" data-k="/">÷</button>
+    <button class="k" data-k="7">7</button>
+    <button class="k" data-k="8">8</button>
+    <button class="k" data-k="9">9</button>
+    <button class="k op" data-k="*">×</button>
+    <button class="k" data-k="4">4</button>
+    <button class="k" data-k="5">5</button>
+    <button class="k" data-k="6">6</button>
+    <button class="k op" data-k="-">−</button>
+    <button class="k" data-k="1">1</button>
+    <button class="k" data-k="2">2</button>
+    <button class="k" data-k="3">3</button>
+    <button class="k op" data-k="+">+</button>
+    <button class="k op" data-k="%">%</button>
+    <button class="k" data-k="0">0</button>
+    <button class="k" data-k=".">.</button>
+    <button class="k eq" data-k="=">=</button>
+  </div>
+
+  <div class="bar">
+    <button id="refresh" aria-label="Update rates now">
+      <svg viewBox="0 0 24 24" id="refreshIcon"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg>
+    </button>
+    <div class="rateWrap">
+      <div id="rateLine">—</div>
+      <div id="rateAge"><span class="dot"></span><span id="ageText">—</span></div>
+    </div>
+    <button id="menuBtn" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.5" fill="currentColor" stroke="none"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="screen" id="picker">
+  <div class="head">
+    <button class="back" id="pickerBack" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <h1>Currencies</h1>
+  </div>
+  <div class="searchWrap"><input id="search" type="search" placeholder="Search 125 currencies" autocomplete="off" autocorrect="off" spellcheck="false"></div>
+  <div id="list"></div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet">
+  <div class="grip"></div>
+  <button class="item" id="mUpdate">
+    <svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg>
+    <span class="txt">Update rates now<span class="sub" id="mUpdateSub"></span></span>
+  </button>
+  <button class="item" id="mRate">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    <span class="txt">Set the rate myself<span class="sub" id="mRateSub"></span></span>
+  </button>
+  <button class="item" id="mCopy">
+    <svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+    <span class="txt">Copy the result</span>
+  </button>
+  <button class="item" id="mShare" hidden>
+    <svg viewBox="0 0 24 24"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M12 16V3M12 3L8 7M12 3l4 4"/></svg>
+    <span class="txt">Send the result to someone</span>
+  </button>
+  <div class="item" id="mTheme">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18" fill="currentColor" stroke="none" opacity=".35"/></svg>
+    <span class="txt">Appearance<span class="sub" id="mThemeSub"></span></span>
+    <span class="seg">
+      <button data-theme-set="auto">Auto</button>
+      <button data-theme-set="dark">Dark</button>
+      <button data-theme-set="light">Light</button>
+    </span>
+  </div>
+  <button class="item" id="mBuzz">
+    <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M3 10v4M21 10v4"/></svg>
+    <span class="txt">Vibrate on key press<span class="sub" id="mBuzzSub"></span></span>
+    <span class="toggle" id="buzzToggle"></span>
+  </button>
+  <button class="item" id="mInstall" hidden>
+    <svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 7.5v7M12 14.5l-2.6-2.6M12 14.5l2.6-2.6"/></svg>
+    <span class="txt">Install on your phone<span class="sub">Own icon, full screen, no address bar</span></span>
+  </button>
+  <div class="credit" id="offlineNote" hidden></div>
+  <div class="credit">Rates by <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Exchange Rate API</a>. No ads, no tracking, nothing leaves your phone.</div>
+</div>
+
+<div class="dlg" id="rateDlg">
+  <h2 id="rateDlgTitle">Set the rate</h2>
+  <p id="rateDlgHint"></p>
+  <input id="rateInput" type="text" inputmode="decimal" autocomplete="off">
+  <div class="dlgBtns">
+    <button id="rateCancel">Cancel</button>
+    <button id="rateClear">Market</button>
+    <button class="primary" id="rateSave">Save</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ==== currency table: units per 1 USD, snapshot taken 20 Sep 2026 ==== */
+var SNAP_LABEL = "20 Sep 2026";
+var SNAP_TS = Date.UTC(2026,8,20,0,35);
+var C = [
+["ILS","Israeli Shekel","🇮🇱",3.0366],
+["USD","US Dollar","🇺🇸",1],
+["EUR","Euro","🇪🇺",0.8712],
+["JPY","Japanese Yen","🇯🇵",156.88],
+["GBP","British Pound","🇬🇧",0.7465],
+["CHF","Swiss Franc","🇨🇭",0.8225],
+["AUD","Australian Dollar","🇦🇺",1.4021],
+["CAD","Canadian Dollar","🇨🇦",1.3999],
+["CNY","Chinese Yuan","🇨🇳",6.6996],
+["HKD","Hong Kong Dollar","🇭🇰",7.8451],
+["TWD","Taiwan Dollar","🇹🇼",31.779],
+["KRW","South Korean Won","🇰🇷",1386.19],
+["THB","Thai Baht","🇹🇭",33.453],
+["SGD","Singapore Dollar","🇸🇬",1.2761],
+["VND","Vietnamese Dong","🇻🇳",26025],
+["MYR","Malaysian Ringgit","🇲🇾",4.0837],
+["IDR","Indonesian Rupiah","🇮🇩",17812],
+["PHP","Philippine Peso","🇵🇭",62.91],
+["INR","Indian Rupee","🇮🇳",95.992],
+["NZD","New Zealand Dollar","🇳🇿",1.7489],
+["AED","UAE Dirham","🇦🇪",3.6725],
+["SAR","Saudi Riyal","🇸🇦",3.7528],
+["TRY","Turkish Lira","🇹🇷",48.767],
+["RUB","Russian Ruble","🇷🇺",84.392],
+["MXN","Mexican Peso","🇲🇽",17.226],
+["BRL","Brazilian Real","🇧🇷",5.142],
+["ZAR","South African Rand","🇿🇦",16.27],
+["SEK","Swedish Krona","🇸🇪",9.8296],
+["NOK","Norwegian Krone","🇳🇴",9.41],
+["DKK","Danish Krone","🇩🇰",6.5081],
+["PLN","Polish Zloty","🇵🇱",3.7975],
+["CZK","Czech Koruna","🇨🇿",21.197],
+["HUF","Hungarian Forint","🇭🇺",317.15],
+["RON","Romanian Leu","🇷🇴",4.5824],
+["BGN","Bulgarian Lev","🇧🇬",1.7028],
+["HRK","Croatian Kuna","🇭🇷",6.5597],
+["ALL","Albanian Lek","🇦🇱",79.601],
+["RSD","Serbian Dinar","🇷🇸",102.04],
+["MKD","Macedonian Denar","🇲🇰",53.554],
+["BAM","Bosnian Mark","🇧🇦",1.7024],
+["MDL","Moldovan Leu","🇲🇩",17.552],
+["ISK","Icelandic Krona","🇮🇸",121.19],
+["UAH","Ukrainian Hryvnia","🇺🇦",44.621],
+["BYN","Belarusian Ruble","🇧🇾",3.0472],
+["GEL","Georgian Lari","🇬🇪",2.6],
+["AMD","Armenian Dram","🇦🇲",362.54],
+["AZN","Azerbaijani Manat","🇦🇿",1.7],
+["KZT","Kazakhstani Tenge","🇰🇿",446.52],
+["KGS","Kyrgyzstani Som","🇰🇬",87.45],
+["UZS","Uzbekistani Som","🇺🇿",11825],
+["TMT","Turkmen Manat","🇹🇲",3.51],
+["EGP","Egyptian Pound","🇪🇬",52.246],
+["MAD","Moroccan Dirham","🇲🇦",9.4626],
+["TND","Tunisian Dinar","🇹🇳",2.9379],
+["DZD","Algerian Dinar","🇩🇿",133.96],
+["JOD","Jordanian Dinar","🇯🇴",0.709],
+["LBP","Lebanese Pound","🇱🇧",89420],
+["QAR","Qatari Riyal","🇶🇦",3.6505],
+["KWD","Kuwaiti Dinar","🇰🇼",0.3088],
+["BHD","Bahraini Dinar","🇧🇭",0.3765],
+["OMR","Omani Rial","🇴🇲",0.3845],
+["IQD","Iraqi Dinar","🇮🇶",1308.35],
+["IRR","Iranian Rial","🇮🇷",1374600],
+["SYP","Syrian Pound","🇸🇾",123.08],
+["YER","Yemeni Rial","🇾🇪",236.55],
+["PKR","Pakistani Rupee","🇵🇰",276.82],
+["BDT","Bangladeshi Taka","🇧🇩",123.43],
+["LKR","Sri Lankan Rupee","🇱🇰",330.57],
+["NPR","Nepalese Rupee","🇳🇵",153.12],
+["MMK","Myanmar Kyat","🇲🇲",2099.5],
+["KHR","Cambodian Riel","🇰🇭",4054.18],
+["LAK","Lao Kip","🇱🇦",22380],
+["BND","Brunei Dollar","🇧🇳",1.2762],
+["MOP","Macanese Pataca","🇲🇴",8.07],
+["FJD","Fijian Dollar","🇫🇯",2.2159],
+["ARS","Argentine Peso","🇦🇷",1514.5],
+["CLP","Chilean Peso","🇨🇱",959.46],
+["COP","Colombian Peso","🇨🇴",3159.07],
+["PEN","Peruvian Sol","🇵🇪",3.3702],
+["UYU","Uruguayan Peso","🇺🇾",40.162],
+["PYG","Paraguayan Guarani","🇵🇾",5920.7],
+["BOB","Bolivian Boliviano","🇧🇴",11.069],
+["VES","Venezuelan Bolivar","🇻🇪",849.56],
+["CRC","Costa Rican Colon","🇨🇷",451.51],
+["DOP","Dominican Peso","🇩🇴",58.946],
+["GTQ","Guatemalan Quetzal","🇬🇹",7.6215],
+["HNL","Honduran Lempira","🇭🇳",26.81],
+["NIO","Nicaraguan Cordoba","🇳🇮",36.75],
+["PAB","Panamanian Balboa","🇵🇦",1],
+["JMD","Jamaican Dollar","🇯🇲",157.71],
+["TTD","Trinidad Dollar","🇹🇹",6.7798],
+["HTG","Haitian Gourde","🇭🇹",130.74],
+["CUP","Cuban Peso","🇨🇺",24],
+["BSD","Bahamian Dollar","🇧🇸",1],
+["BBD","Barbadian Dollar","🇧🇧",2],
+["BZD","Belize Dollar","🇧🇿",2],
+["BMD","Bermudian Dollar","🇧🇲",1],
+["KYD","Cayman Dollar","🇰🇾",0.8333],
+["ANG","Antillean Guilder","🇨🇼",1.79],
+["NGN","Nigerian Naira","🇳🇬",1335.69],
+["KES","Kenyan Shilling","🇰🇪",129.51],
+["TZS","Tanzanian Shilling","🇹🇿",2650],
+["UGX","Ugandan Shilling","🇺🇬",3939.58],
+["GHS","Ghanaian Cedi","🇬🇭",11.505],
+["ETB","Ethiopian Birr","🇪🇹",161.76],
+["MUR","Mauritian Rupee","🇲🇺",47.57],
+["SCR","Seychellois Rupee","🇸🇨",14.056],
+["BWP","Botswana Pula","🇧🇼",13.544],
+["NAD","Namibian Dollar","🇳🇦",16.237],
+["LSL","Lesotho Loti","🇱🇸",16.237],
+["SZL","Swazi Lilangeni","🇸🇿",16.232],
+["ZMW","Zambian Kwacha","🇿🇲",19.63],
+["MWK","Malawian Kwacha","🇲🇼",1750.99],
+["RWF","Rwandan Franc","🇷🇼",1467.12],
+["SOS","Somali Shilling","🇸🇴",570.74],
+["SDG","Sudanese Pound","🇸🇩",601.5],
+["LYD","Libyan Dinar","🇱🇾",6.3437],
+["GMD","Gambian Dalasi","🇬🇲",73.5],
+["GNF","Guinean Franc","🇬🇳",8780.01],
+["BIF","Burundian Franc","🇧🇮",3002.66],
+["CVE","Cape Verde Escudo","🇨🇻",95.979],
+["AOA","Angolan Kwanza","🇦🇴",913],
+["DJF","Djiboutian Franc","🇩🇯",177.85]
+];
+var MAP = {};
+for (var i=0;i<C.length;i++){ MAP[C[i][0]] = {code:C[i][0], name:C[i][1], flag:C[i][2], rate:C[i][3], order:i}; }
+var ZERO_DEC = {JPY:1,KRW:1,VND:1,IDR:1,CLP:1,COP:1,HUF:1,ISK:1,PYG:1,KHR:1,LAK:1,MMK:1,UGX:1,TZS:1,RWF:1,GNF:1,BIF:1,IRR:1,LBP:1,UZS:1,ARS:1,VES:1,IQD:1,SOS:1,MWK:1,CRC:1,DJF:1,SDG:1};
+var MAP = {};
+for (var i=0;i<C.length;i++){ MAP[C[i][0]] = {code:C[i][0], name:C[i][1], flag:C[i][2], rate:C[i][3], order:i}; }
+
+/* ============ saved settings ============ */
+var LS = {
+  get:function(k,d){ try{ var v=localStorage.getItem("cc."+k); return v===null?d:JSON.parse(v);}catch(e){return d;} },
+  set:function(k,v){ try{ localStorage.setItem("cc."+k, JSON.stringify(v)); }catch(e){} }
+};
+var S = {
+  pair: LS.get("pair",["JPY","ILS"]),
+  recents: LS.get("recents",["JPY","ILS","USD","EUR"]),
+  custom: LS.get("custom",{}),
+  buzz: LS.get("buzz",true),
+  theme: LS.get("theme","auto"),
+  flip: false,
+  active: 1,
+  expr: "0"
+};
+if(!MAP[S.pair[0]]) S.pair[0]="USD";
+if(!MAP[S.pair[1]]) S.pair[1]="EUR";
+
+/* live = what we actually fetched.
+   fetchedAt  = when THIS PHONE last got an answer
+   publishedAt = when the provider last recalculated the rates (once a day)
+   Keeping them apart is why the old build looked frozen: it showed the
+   provider's daily stamp and called it the update time. */
+var live = null;
+(function(){
+  var st = LS.get("live", null);
+  if (st && st.rates && typeof st.rates.USD === "number"){
+    live = {
+      rates: st.rates,
+      fetchedAt: st.fetchedAt || st.ts || 0,
+      publishedAt: st.publishedAt || st.ts || null,
+      src: st.src || "Exchange Rate API"
+    };
+  }
+})();
+
+/* Extra words people actually type when hunting for a currency. */
+var ALIAS = {
+  USD:"america american us usa dollar $", EUR:"europe european eu \u20ac", GBP:"uk england britain british sterling \u00a3",
+  JPY:"japan tokyo \u00a5", ILS:"israel shekel nis \u20aa", CHF:"switzerland swiss", CNY:"china rmb renminbi \u00a5",
+  KRW:"korea seoul \u20a9", INR:"india \u20b9", THB:"thailand bangkok \u0e3f", VND:"vietnam \u20ab",
+  TRY:"turkey istanbul \u20ba", RUB:"russia \u20bd", AED:"dubai emirates uae", SAR:"saudi arabia",
+  AUD:"australia aussie", CAD:"canada", NZD:"new zealand kiwi", HKD:"hong kong", TWD:"taiwan taipei",
+  SGD:"singapore", MYR:"malaysia", IDR:"indonesia bali", PHP:"philippines", MXN:"mexico",
+  BRL:"brazil", ARS:"argentina", CLP:"chile", COP:"colombia", PEN:"peru", ZAR:"south africa",
+  EGP:"egypt cairo", MAD:"morocco", TND:"tunisia", JOD:"jordan", LBP:"lebanon", QAR:"qatar",
+  KWD:"kuwait", BHD:"bahrain", OMR:"oman", CZK:"czech prague", PLN:"poland", HUF:"hungary budapest",
+  RON:"romania", BGN:"bulgaria", HRK:"croatia", RSD:"serbia", ALL:"albania tirana", ISK:"iceland",
+  SEK:"sweden", NOK:"norway", DKK:"denmark", GEL:"georgia tbilisi", AMD:"armenia", AZN:"azerbaijan",
+  KZT:"kazakhstan", UZS:"uzbekistan", UAH:"ukraine", NGN:"nigeria", KES:"kenya", ETB:"ethiopia",
+  TZS:"tanzania zanzibar", MUR:"mauritius", LKR:"sri lanka", NPR:"nepal", PKR:"pakistan", BDT:"bangladesh",
+  KHR:"cambodia", LAK:"laos", MMK:"myanmar burma", FJD:"fiji", CRC:"costa rica", DOP:"dominican",
+  GTQ:"guatemala", PAB:"panama", JMD:"jamaica", CUP:"cuba", BSD:"bahamas"
+};
+
+/* ============ helpers ============ */
+function $(s){ return document.querySelector(s); }
+function perUsd(code){
+  if (live && typeof live.rates[code] === "number" && live.rates[code] > 0) return live.rates[code];
+  return MAP[code].rate;
+}
+function pairKey(a,b){ return a+">"+b; }
+function rateOf(a,b){
+  var c = S.custom[pairKey(a,b)];
+  if (typeof c === "number" && c>0) return c;
+  var c2 = S.custom[pairKey(b,a)];
+  if (typeof c2 === "number" && c2>0) return 1/c2;
+  return perUsd(b)/perUsd(a);
+}
+function isCustom(a,b){ return typeof S.custom[pairKey(a,b)]==="number" || typeof S.custom[pairKey(b,a)]==="number"; }
+
+function fmt(v, code){
+  if (v===null || !isFinite(v)) return "Error";
+  var a = Math.abs(v), d;
+  if (a===0) return "0";
+  if (a < 0.0001) d = 8;
+  else if (a < 0.01) d = 6;
+  else if (a < 1) d = 4;
+  else d = ZERO_DEC[code] ? 0 : 2;
+  return v.toLocaleString("en-US",{maximumFractionDigits:d});
+}
+function fmtRate(v){
+  if(!isFinite(v)) return "—";
+  var a=Math.abs(v), d = a>=100?2 : a>=1?4 : a>=0.01?5 : 7;
+  return v.toLocaleString("en-US",{maximumFractionDigits:d});
+}
+function groupExpr(e){
+  return e.replace(/\d+(\.\d*)?/g, function(n){
+    var p = n.split(".");
+    var head = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return p.length>1 ? head+"."+p[1] : head;
+  }).replace(/\*/g,"×").replace(/\//g,"÷").replace(/-/g,"−");
+}
+function evalExpr(e){
+  var toks = e.match(/(\d+\.?\d*|\.\d+|[+\-*\/])/g);
+  if(!toks) return 0;
+  while(toks.length && /[+\-*\/]/.test(toks[toks.length-1])) toks.pop();
+  if(!toks.length) return 0;
+  var vals=[parseFloat(toks[0])], ops=[];
+  for(var i=1;i<toks.length;i+=2){
+    if(toks[i+1]===undefined) break;
+    ops.push(toks[i]); vals.push(parseFloat(toks[i+1]));
+  }
+  for(var j=0;j<ops.length;){
+    if(ops[j]==="*"||ops[j]==="/"){
+      var a=vals[j], b=vals[j+1];
+      vals.splice(j,2, ops[j]==="*" ? a*b : a/b);
+      ops.splice(j,1);
+    } else j++;
+  }
+  var r=vals[0];
+  for(var k=0;k<ops.length;k++){ r = ops[k]==="+" ? r+vals[k+1] : r-vals[k+1]; }
+  return isFinite(r) ? r : null;
+}
+function ago(ts){
+  if (!ts) return "never";
+  var m = Math.floor((Date.now()-ts)/60000);
+  if (m < 1) return "just now";
+  if (m < 60) return m + " min ago";
+  var h = Math.floor(m/60);
+  if (h < 24) return h + (h===1?" hour ago":" hours ago");
+  var d = Math.floor(h/24);
+  return d + (d===1?" day ago":" days ago");
+}
+function stamp(ts){
+  if (!ts) return "unknown";
+  try { return new Date(ts).toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}); }
+  catch(e){ return new Date(ts).toISOString().slice(0,16).replace("T"," "); }
+}
+
+/* ============ vibration ============
+   The old build asked for 8ms, which most phone motors are too slow to
+   render at all. 18ms is the shortest pulse that reliably registers.     */
+var canVibe = (typeof navigator.vibrate === "function");
+var inFrame = (function(){ try { return window.top !== window.self; } catch(e){ return true; } })();
+function buzz(ms){
+  if (!S.buzz || !canVibe) return;
+  try { navigator.vibrate(ms || 18); } catch(e){}
+}
+function buzzWhy(){
+  if (!canVibe) return "This browser has no vibration support.";
+  if (inFrame) return "Blocked inside an embedded preview. Works on your own site.";
+  if (!S.buzz) return "Off.";
+  return "On. If you feel nothing, check the phone's own haptic setting and that it isn't in silent mode.";
+}
+
+/* ============ render ============ */
+var panels = [
+  {cur:$('#pTop .cur'), val:$('#pTop .val'), num:$('#pTop .num'), flag:$('#pTop .flag'), code:$('#pTop .code'), el:$('#pTop')},
+  {cur:$('#pBot .cur'), val:$('#pBot .val'), num:$('#pBot .num'), flag:$('#pBot .flag'), code:$('#pBot .code'), el:$('#pBot')}
+];
+function sizeClass(len){ return len<=9?"" : len<=12?"s2" : len<=16?"s3" : "s4"; }
+
+function render(){
+  var av = evalExpr(S.expr);
+  for (var s=0;s<2;s++){
+    var cc = S.pair[s], p = panels[s];
+    p.flag.textContent = MAP[cc].flag;
+    p.code.textContent = cc;
+    p.el.classList.toggle("active", s === S.active);
+    var txt, caret=false;
+    if (s === S.active){
+      txt = groupExpr(S.expr); caret = true;
+      p.val.classList.remove("result");
+    } else {
+      txt = (av===null) ? "Error" : fmt(av * rateOf(S.pair[S.active], cc), cc);
+      p.val.classList.add("result");
+    }
+    p.num.className = "num " + sizeClass(txt.length + (caret?1:0));
+    p.num.textContent = txt;
+    if (caret){ var b=document.createElement("span"); b.className="caret"; p.num.appendChild(b); }
+  }
+  var a = S.pair[0], b = S.pair[1];
+  var l = S.flip ? a : b, r = S.flip ? b : a;
+  $("#rateLine").textContent = "1 " + l + " = " + fmtRate(rateOf(l,r)) + " " + r;
+  renderAge();
+}
+function renderAge(){
+  var box = $("#rateAge"), t = $("#ageText");
+  box.className = "";
+  if (isCustom(S.pair[0], S.pair[1])){ box.className = "custom"; t.textContent = "Your own rate"; return; }
+  if (live && live.fetchedAt){
+    var stale = (Date.now() - live.fetchedAt) > 3*86400000;
+    box.className = stale ? "warn" : "live";
+    t.textContent = "Checked " + ago(live.fetchedAt);
+    return;
+  }
+  box.className = "warn";
+  t.textContent = isLocalFile() ? "Local file \u00b7 rates of " + SNAP_LABEL
+                                : "Built-in rates of " + SNAP_LABEL;
+}
+
+/* ============ touch: long press and swipe ============ */
+var suppressUntil = 0;
+function suppressed(){ return Date.now() < suppressUntil; }
+function longPress(el, ms, fn){
+  var t=null, sx=0, sy=0;
+  function stop(){ if(t){ clearTimeout(t); t=null; } }
+  el.addEventListener("pointerdown", function(ev){
+    sx=ev.clientX; sy=ev.clientY; stop();
+    t=setTimeout(function(){ t=null; suppressUntil=Date.now()+700; fn(ev); }, ms);
+  });
+  el.addEventListener("pointermove", function(ev){
+    if (Math.abs(ev.clientX-sx)>12 || Math.abs(ev.clientY-sy)>12) stop();
+  });
+  ["pointerup","pointercancel","pointerleave"].forEach(function(n){ el.addEventListener(n, stop); });
+}
+function copyOut(txt, label){
+  if (!txt) return;
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){ buzz(28); toast("Copied " + label); },
+      function(){ toast("Your browser blocked the copy."); });
+  } else toast("Your browser blocked the copy.");
+}
+function slotValue(idx){
+  var av = evalExpr(S.expr);
+  if (av === null) return null;
+  return (idx === S.active) ? av : av * rateOf(S.pair[S.active], S.pair[idx]);
+}
+
+/* ============ keypad ============ */
+function lastNumber(e){ var m = e.match(/(\d+\.?\d*|\.\d+)$/); return m?m[0]:null; }
+
+function press(k){
+  buzz();
+  var e = S.expr;
+  if (k === "C"){ S.expr = "0"; render(); return; }
+  if (k === "back"){
+    S.expr = e.length>1 ? e.slice(0,-1) : "0";
+    if (S.expr === "") S.expr = "0";
+    render(); return;
+  }
+  if (k === "swap"){ doSwap(); return; }
+  if (k === "="){
+    var v = evalExpr(e);
+    S.expr = (v===null) ? "0" : String(Math.round(v*1e10)/1e10);
+    render(); return;
+  }
+  if (k === "%"){
+    var n = lastNumber(e);
+    if (!n) return;
+    var head = e.slice(0, e.length-n.length);
+    var op = head.slice(-1), val = parseFloat(n)/100;
+    if (op === "+" || op === "-"){
+      var base = evalExpr(head.slice(0,-1));
+      if (base !== null) val = base * val;
+    }
+    S.expr = head + String(Math.round(val*1e10)/1e10);
+    render(); return;
+  }
+  if ("+-*/".indexOf(k) >= 0){
+    S.expr = /[+\-*\/]$/.test(e) ? e.slice(0,-1) + k : e + k;
+    render(); return;
+  }
+  if (k === "."){
+    var cur = lastNumber(e);
+    if (cur === null) S.expr = e + "0.";
+    else if (cur.indexOf(".") === -1) S.expr = e + ".";
+    render(); return;
+  }
+  if (e.length > 24) return;
+  var lastN = lastNumber(e);
+  S.expr = (lastN === "0") ? e.slice(0,-1) + k : e + k;
+  render();
+}
+function doSwap(){
+  S.pair = [S.pair[1], S.pair[0]];
+  S.active = S.active === 0 ? 1 : 0;
+  LS.set("pair", S.pair);
+  render();
+}
+
+var holdTimer = null;
+$("#keys").addEventListener("pointerdown", function(ev){
+  var b = ev.target.closest(".k");
+  if (!b) return;
+  ev.preventDefault();
+  var k = b.getAttribute("data-k");
+  press(k);
+  if (k === "back"){                       // hold it to wipe the whole entry
+    clearTimeout(holdTimer);
+    holdTimer = setTimeout(function(){ S.expr = "0"; buzz(32); render(); }, 520);
+  }
+});
+["pointerup","pointercancel","pointerleave"].forEach(function(n){
+  $("#keys").addEventListener(n, function(){ clearTimeout(holdTimer); });
+});
+$("#swapFab").addEventListener("pointerdown", function(ev){ ev.preventDefault(); buzz(22); doSwap(); });
+
+(function(){
+  var sx=0, sy=0, st=0, tracking=false;
+  var stack = document.querySelector(".stack");
+  stack.addEventListener("pointerdown", function(ev){ sx=ev.clientX; sy=ev.clientY; st=Date.now(); tracking=true; });
+  stack.addEventListener("pointerup", function(ev){
+    if (!tracking) return; tracking = false;
+    var dy = ev.clientY-sy, dx = ev.clientX-sx;
+    if (Math.abs(dy) > 46 && Math.abs(dy) > Math.abs(dx)*1.4 && Date.now()-st < 700){
+      suppressUntil = Date.now()+400;
+      buzz(22); doSwap();
+    }
+  });
+  stack.addEventListener("pointercancel", function(){ tracking=false; });
+})();
+
+for (var s2=0;s2<2;s2++){
+  (function(idx){
+    longPress(panels[idx].val, 480, function(){
+      var v = slotValue(idx);
+      if (v === null) return;
+      copyOut(String(Math.round(v*1e6)/1e6), fmt(v, S.pair[idx]) + " " + S.pair[idx]);
+    });
+    panels[idx].val.addEventListener("click", function(){
+      if (suppressed() || S.active === idx) return;
+      var v = evalExpr(S.expr);
+      var conv = (v===null?0:v) * rateOf(S.pair[S.active], S.pair[idx]);
+      S.active = idx;
+      S.expr = String(Math.round(conv*1e6)/1e6);
+      buzz(); render();
+    });
+    panels[idx].cur.addEventListener("click", function(){ if (suppressed()) return; buzz(); openPicker(idx); });
+  })(s2);
+}
+
+/* ============ currency picker ============ */
+var pickSlot = 0;
+function pushRecent(code){
+  S.recents = [code].concat(S.recents.filter(function(c){return c!==code;})).slice(0,6);
+  LS.set("recents", S.recents);
+}
+function openPicker(slot){
+  pickSlot = slot;
+  $("#search").value = "";
+  buildList("");
+  $("#picker").classList.add("open");
+  $("#list").scrollTop = 0;
+}
+function closePicker(){ $("#picker").classList.remove("open"); $("#search").blur(); }
+function buildList(q){
+  q = q.trim().toLowerCase();
+  var pinned = {}, chosen = {};
+  S.pair.forEach(function(c){ pinned[c]=1; chosen[c]=1; });
+  S.recents.forEach(function(c){ pinned[c]=1; });
+  var items = C.map(function(x){ return MAP[x[0]]; });
+  if (q){
+    items = items.filter(function(m){
+      return m.code.toLowerCase().indexOf(q)>=0 || m.name.toLowerCase().indexOf(q)>=0
+          || (ALIAS[m.code] && ALIAS[m.code].indexOf(q)>=0);
+    }).sort(function(x,y){
+      var a = x.code.toLowerCase().indexOf(q)===0 ? 0:1, b = y.code.toLowerCase().indexOf(q)===0 ? 0:1;
+      return a-b || x.order-y.order;
+    });
+  } else {
+    var top = [], rest = [], seen = {};
+    S.pair.concat(S.recents).forEach(function(c){ if(!seen[c] && MAP[c]){ seen[c]=1; top.push(MAP[c]); } });
+    items.forEach(function(m){ if(!seen[m.code]) rest.push(m); });
+    items = top.concat(rest);
+  }
+  var html = "";
+  for (var i=0;i<items.length;i++){
+    var m = items[i];
+    html += '<button class="row'+(pinned[m.code]?' pinned':'')+(chosen[m.code]?' chosen':'')+'" data-code="'+m.code+'">'
+          + '<span class="flag">'+m.flag+'</span>'
+          + '<span class="name">'+m.name+'</span>'
+          + '<span class="cc">'+m.code+'</span></button>';
+  }
+  if (!items.length) html = '<div class="empty">Nothing matches that. Try a code like JPY.</div>';
+  $("#list").innerHTML = html;
+}
+$("#search").addEventListener("input", function(){ buildList(this.value); $("#list").scrollTop=0; });
+$("#pickerBack").addEventListener("click", function(){ buzz(); closePicker(); });
+$("#list").addEventListener("click", function(ev){
+  var r = ev.target.closest(".row");
+  if (!r) return;
+  var code = r.getAttribute("data-code");
+  var other = S.pair[pickSlot===0?1:0];
+  if (code === other) S.pair = [S.pair[1], S.pair[0]];
+  else S.pair[pickSlot] = code;
+  pushRecent(code);
+  LS.set("pair", S.pair);
+  buzz(); closePicker(); render();
+});
+
+/* ============ sheet & dialogs ============ */
+function openSheet(){
+  $("#mUpdateSub").textContent = live
+    ? "Checked " + ago(live.fetchedAt) + " \u00b7 rates published " + stamp(live.publishedAt)
+    : "Never checked \u00b7 using the built-in rates of " + SNAP_LABEL;
+  $("#mRateSub").textContent = isCustom(S.pair[0],S.pair[1])
+    ? "Your own rate is in use for " + S.pair[1] + " \u2192 " + S.pair[0]
+    : S.pair[1] + " \u2192 " + S.pair[0];
+  $("#mBuzzSub").textContent = buzzWhy();
+  $("#buzzToggle").classList.toggle("on", !!(S.buzz && canVibe));
+  markOffline();
+  $("#scrim").classList.add("open"); $("#sheet").classList.add("open");
+}
+function closeSheet(){ $("#scrim").classList.remove("open"); $("#sheet").classList.remove("open"); }
+$("#menuBtn").addEventListener("click", function(){ buzz(); openSheet(); });
+$("#scrim").addEventListener("click", function(){ closeSheet(); closeRateDlg(); });
+
+$("#mBuzz").addEventListener("click", function(){
+  if (!canVibe){ toast("This browser can't vibrate."); return; }
+  S.buzz = !S.buzz; LS.set("buzz", S.buzz);
+  $("#buzzToggle").classList.toggle("on", S.buzz);
+  $("#mBuzzSub").textContent = buzzWhy();
+  if (S.buzz){ try{ navigator.vibrate(40); }catch(e){} }   // so you can feel it straight away
+});
+$("#mCopy").addEventListener("click", function(){
+  var other = S.pair[S.active===0?1:0];
+  var v = evalExpr(S.expr);
+  var txt = (v===null) ? "" : fmt(v*rateOf(S.pair[S.active], other), other);
+  closeSheet();
+  if (navigator.clipboard && txt){
+    navigator.clipboard.writeText(txt).then(function(){ toast("Copied " + txt + " " + other); },
+      function(){ toast("Could not copy here."); });
+  } else toast("Could not copy here.");
+});
+$("#mUpdate").addEventListener("click", function(){ closeSheet(); updateRates(true); });
+$("#refresh").addEventListener("click", function(){ buzz(); updateRates(true); });
+
+function openRateDlg(){
+  var a = S.pair[0], b = S.pair[1];
+  $("#rateDlgTitle").textContent = "1 " + b + " in " + a;
+  $("#rateDlgHint").textContent = "Type the rate your bank or the exchange desk gives you. It stays saved for this pair until you tap Market.";
+  $("#rateInput").value = fmtRate(rateOf(b,a)).replace(/,/g,"");
+  $("#scrim").classList.add("open"); $("#rateDlg").classList.add("open");
+  setTimeout(function(){ $("#rateInput").focus(); $("#rateInput").select(); }, 60);
+}
+function closeRateDlg(){ $("#rateDlg").classList.remove("open"); $("#scrim").classList.remove("open"); }
+$("#mRate").addEventListener("click", function(){ closeSheet(); openRateDlg(); });
+$("#rateLine").parentNode.addEventListener("click", function(){
+  if (suppressed()) return;
+  S.flip = !S.flip; buzz(); render();
+});
+longPress($("#rateLine").parentNode, 500, openRateDlg);
+$("#rateCancel").addEventListener("click", closeRateDlg);
+$("#rateClear").addEventListener("click", function(){
+  delete S.custom[pairKey(S.pair[1],S.pair[0])];
+  delete S.custom[pairKey(S.pair[0],S.pair[1])];
+  LS.set("custom", S.custom); closeRateDlg(); render(); toast("Back to market rates.");
+});
+$("#rateSave").addEventListener("click", function(){
+  var v = parseFloat($("#rateInput").value.replace(/[^0-9.]/g,""));
+  if (!isFinite(v) || v<=0){ toast("Enter a number bigger than zero."); return; }
+  delete S.custom[pairKey(S.pair[0],S.pair[1])];
+  S.custom[pairKey(S.pair[1],S.pair[0])] = v;
+  LS.set("custom", S.custom); closeRateDlg(); render();
+});
+
+var toastTimer;
+function toast(msg){
+  var t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer = setTimeout(function(){ t.classList.remove("show"); }, 3000);
+}
+
+/* ============ live rates ============ */
+var SOURCES = [
+  {name:"Exchange Rate API", url:"https://open.er-api.com/v6/latest/USD", pick:function(j){
+      if(!j || !j.rates) return null;
+      return {rates:j.rates, publishedAt:(j.time_last_update_unix ? j.time_last_update_unix*1000 : null)};
+  }},
+  {name:"Frankfurter", url:"https://api.frankfurter.app/latest?from=USD", pick:function(j){
+      if(!j || !j.rates) return null;
+      var r = {}; for (var k in j.rates){ r[k] = j.rates[k]; } r.USD = 1;
+      return {rates:r, publishedAt:(j.date ? Date.parse(j.date+"T00:00:00Z") : null)};
+  }},
+  {name:"Currency API", url:"https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.min.json", pick:function(j){
+      if(!j || !j.usd) return null;
+      var r = {}; for (var k in j.usd){ r[k.toUpperCase()] = j.usd[k]; }
+      return {rates:r, publishedAt:(j.date ? Date.parse(j.date+"T00:00:00Z") : null)};
+  }}
+];
+function isLocalFile(){
+  var p = location.protocol;
+  return p === "file:" || p === "content:" || p === "blob:";
+}
+function failReason(){
+  if (navigator.onLine === false) return "You're offline. Rates will update when you reconnect.";
+  if (isLocalFile()) return "Updates are blocked because this page is a file on your phone, not a website. Put it online, or set the rate yourself.";
+  return "No rate service answered. Your connection may be filtering them. Try again in a minute.";
+}
+function sane(out){
+  if (!out || !out.rates) return false;
+  var r = out.rates, n = 0;
+  for (var k in r){ if (typeof r[k] === "number" && isFinite(r[k]) && r[k] > 0) n++; }
+  return n > 20 && typeof r.ILS === "number" && r.ILS > 0 && typeof r.JPY === "number" && r.JPY > 0;
+}
+
+var updating = false, wantLoud = false;
+function updateRates(loud){
+  if (loud) wantLoud = true;
+  if (updating) return;
+  updating = true;
+  $("#refreshIcon").classList.add("spin");
+  var idx = 0;
+  function step(){
+    if (idx >= SOURCES.length){ finish(false); return; }
+    var src = SOURCES[idx++], done = false;
+    var ctl = ("AbortController" in window) ? new AbortController() : null;
+    var to = setTimeout(function(){ if(ctl) try{ ctl.abort(); }catch(e){} }, 10000);
+    fetch(src.url, {cache:"no-store", signal: ctl?ctl.signal:undefined})
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(new Error("HTTP "+r.status)); })
+      .then(function(j){
+        clearTimeout(to);
+        var out = src.pick(j);
+        if (!sane(out)) throw new Error("unusable answer");
+        done = true;
+        live = {
+          rates: out.rates,
+          fetchedAt: Date.now(),
+          publishedAt: out.publishedAt || Date.now(),
+          src: src.name
+        };
+        LS.set("live", live);
+        finish(true);
+      })
+      .catch(function(){
+        clearTimeout(to);
+        if (!done) step();                       // that source failed, try the next
+      });
+  }
+  function finish(ok){
+    updating = false;
+    var loudNow = wantLoud; wantLoud = false;
+    $("#refreshIcon").classList.remove("spin");
+    render();
+    if (!loudNow) return;
+    if (ok) toast("Rates updated from " + live.src + ".\nThey were published " + stamp(live.publishedAt) + ".");
+    else toast(failReason());
+  }
+  step();
+}
+
+/* ============ appearance ============ */
+function applyTheme(t){
+  S.theme = t; LS.set("theme", t);
+  var root = document.documentElement;
+  if (t === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", t);
+  var sysLight = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches);
+  var dark = (t === "dark") || (t === "auto" && !sysLight);
+  var meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", dark ? "#0A0D12" : "#EEF2F7");
+  var seg = document.querySelectorAll("[data-theme-set]");
+  for (var i=0;i<seg.length;i++){
+    seg[i].classList.toggle("on", seg[i].getAttribute("data-theme-set") === t);
+  }
+  var sub = $("#mThemeSub");
+  if (sub) sub.textContent = t === "auto" ? "Following your phone" : (t === "dark" ? "Always dark" : "Always light \u00b7 easier in sunlight");
+}
+$("#mTheme").addEventListener("click", function(ev){
+  var b = ev.target.closest("[data-theme-set]");
+  if (!b) return;
+  buzz(); applyTheme(b.getAttribute("data-theme-set"));
+});
+if (window.matchMedia){
+  try {
+    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", function(){
+      if (S.theme === "auto") applyTheme("auto");
+    });
+  } catch(e){}
+}
+
+/* ============ share ============ */
+if (navigator.share){
+  $("#mShare").hidden = false;
+  $("#mShare").addEventListener("click", function(){
+    var other = S.pair[S.active===0?1:0], v = evalExpr(S.expr);
+    if (v === null) return;
+    closeSheet();
+    var txt = fmt(v, S.pair[S.active]) + " " + S.pair[S.active] + " = "
+            + fmt(v*rateOf(S.pair[S.active], other), other) + " " + other;
+    try { navigator.share({text: txt}).catch(function(){}); } catch(e){}
+  });
+}
+
+/* ============ install & offline ============ */
+var deferredInstall = null;
+window.addEventListener("beforeinstallprompt", function(e){
+  e.preventDefault(); deferredInstall = e; $("#mInstall").hidden = false;
+});
+$("#mInstall").addEventListener("click", function(){
+  closeSheet();
+  if (!deferredInstall) return;
+  deferredInstall.prompt();
+  deferredInstall.userChoice.then(function(){ deferredInstall = null; $("#mInstall").hidden = true; });
+});
+window.addEventListener("appinstalled", function(){
+  deferredInstall = null; $("#mInstall").hidden = true;
+  toast("Installed. Open it from your home screen.");
+});
+function markOffline(){
+  var n = $("#offlineNote");
+  if (n && navigator.serviceWorker && navigator.serviceWorker.controller){
+    n.hidden = false;
+    n.textContent = "\u2713 Saved on this phone \u2014 opens with no signal.";
+  }
+}
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0){
+  window.addEventListener("load", function(){
+    navigator.serviceWorker.register("sw.js").then(function(){
+      setTimeout(markOffline, 800);
+    }).catch(function(){});
+  });
+}
+
+/* ============ boot ============ */
+window.__androidBack = function(){
+  if ($("#rateDlg").classList.contains("open")){ closeRateDlg(); return true; }
+  if ($("#sheet").classList.contains("open")){ closeSheet(); return true; }
+  if ($("#picker").classList.contains("open")){ closePicker(); return true; }
+  return false;
+};
+
+$("#search").setAttribute("placeholder", "Search " + C.length + " currencies");
+applyTheme(S.theme);
+markOffline();
+render();
+updateRates(false);
+
+document.addEventListener("visibilitychange", function(){
+  if (!document.hidden){
+    renderAge();
+    if (!live || Date.now()-live.fetchedAt > 3600000) updateRates(false);
+  }
+});
+window.addEventListener("online", function(){ updateRates(false); });
+setInterval(renderAge, 30000);
+
+document.addEventListener("keydown", function(ev){
+  if ($("#picker").classList.contains("open") || $("#rateDlg").classList.contains("open")) return;
+  var k = ev.key;
+  if (/^[0-9]$/.test(k)) press(k);
+  else if (k==="+"||k==="-"||k==="*"||k==="/") press(k);
+  else if (k==="."||k===",") press(".");
+  else if (k==="Enter"||k==="=") press("=");
+  else if (k==="Backspace") press("back");
+  else if (k==="Escape"||k==="c"||k==="C") press("C");
+  else if (k==="%") press("%");
+  else return;
+  ev.preventDefault();
+});
+
+})();
+</script>
+</body>
+</html>
